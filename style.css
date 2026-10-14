@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  padding: 30px 10px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #7f8c8d;
+}
+
+.invoice-box {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.form-row div {
+  flex: 1;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #34495e;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th {
+  background-color: #f8f9fa;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid #dee2e6;
+  color: #495057;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-weight: 600;
+}
+
+#addRowBtn {
+  background-color: #27ae60;
+  color: white;
+}
+
+#addRowBtn:hover {
+  background-color: #219150;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.summary {
+  width: 250px;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 18px;
+  border-top: 2px solid #333;
+  color: #2c3e50;
+}
+
+.actions {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.btn-primary {
+  background-color: #2980b9;
+  color: white;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #3498db;
+}
+
+@media print {
+  body { background: white; padding: 0; }
+  .invoice-box { box-shadow: none; padding: 0; }
+  #addRowBtn, .btn-danger, .actions { display: none; }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice & Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Invoice Generator</h1>
+      <p>Create professional invoices in seconds</p>
+    </header>
+
+    <div class="invoice-box">
+      <div class="form-row">
+        <div>
+          <label>Client Name:</label>
+          <input type="text" id="clientName" placeholder="Acme Corp">
+        </div>
+        <div>
+          <label>Invoice Date:</label>
+          <input type="date" id="invoiceDate">
+        </div>
+      </div>
+
+      <table id="itemsTable">
+        <thead>
+          <tr>
+            <th>Item Description</th>
+            <th>Qty</th>
+            <th>Price ($)</th>
+            <th>Total ($)</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <td><input type="text" class="desc" placeholder="Web Development"></td>
+            <td><input type="number" class="qty" value="1" min="1"></td>
+            <td><input type="number" class="price" value="500" min="0"></td>
+            <td class="item-total">$500.00</td>
+            <td><button class="btn-danger" onclick="deleteRow(this)">X</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button id="addRowBtn" onclick="addRow()">+ Add Item</button>
+
+      <div class="summary">
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="subtotal">$500.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Tax (10%):</span>
+          <span id="tax">$50.00</span>
+        </div>
+        <div class="summary-row total">
+          <span>Grand Total:</span>
+          <span id="grandTotal">$550.00</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary" onclick="window.print()">Print / Save as PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
